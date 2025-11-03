@@ -9,7 +9,7 @@
 //   FaChartLine,
 // } from "react-icons/fa";
 // import { Link } from "react-router-dom";
-
+//hi
 // export default function FrontPage() {
 //   return (
 //     <div className="bg-[#001e2b] text-white font-sans">
