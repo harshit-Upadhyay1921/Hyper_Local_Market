@@ -31,7 +31,7 @@ const saleSchema = new mongoose.Schema(
       type: Number,
       required: true,
       min: 1,
-      max: 100, // Assuming discount is in percentage
+      max: 100, 
     },
     startDate: {
       type: Date,
@@ -48,7 +48,7 @@ const saleSchema = new mongoose.Schema(
     generateCoupon: {
       type: Boolean,
       default: false,
-      required:true
+      required:true,
     },
   },
   { timestamps: true }
