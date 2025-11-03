@@ -14,11 +14,11 @@ const shopSchema = new mongoose.Schema({
   address: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
   },
   contactDetails: {
     type: String,
-    required: true
+    required: true,
   },
   location: {
   type: {
