@@ -1,7 +1,7 @@
 // import React, { useState } from "react";
 // import { FaMapMarkerAlt, FaBell, FaShoppingCart, FaUserCircle } from "react-icons/fa";
 // import { Link } from "react-router-dom";
-
+//this is prfile page
 // const Navbar = () => (
 //   <nav className="flex justify-between items-center px-8 py-4 bg-white shadow fixed top-0 left-0 right-0 z-50 border-b-2">
 //     <div className="text-green-600 text-2xl font-bold flex items-center gap-2">
