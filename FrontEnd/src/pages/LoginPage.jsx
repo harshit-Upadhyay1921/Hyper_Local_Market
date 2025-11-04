@@ -274,8 +274,9 @@ export default function LoginPage() {
           </div>
           <p className="text-gray-600 mb-6">Log in to your account</p>
 
-          <GoogleLogin
-            onSuccess={async (credentialResponse) => {
+          <div className="w-full">
+            <GoogleLogin
+              onSuccess={async (credentialResponse) => {
               try {
                 const { credential } = credentialResponse;
                 if (!locationReady) {
@@ -322,15 +323,17 @@ export default function LoginPage() {
 
                 setMessage("❌ Google login failed: " + (msg || "Unknown error"));
               }
-            }}
-            onError={() => {
-              setMessage("❌ Google login failed: Authorization error");
-            }}
-            theme="outline"
-            shape="pill"
-            width="240"
-            disabled={!locationReady}
-          />
+              }}
+              onError={() => {
+                setMessage("❌ Google login failed: Authorization error");
+              }}
+              theme="outline"
+              shape="pill"
+              width="100%"
+              style={{ width: "100%" }}
+              disabled={!locationReady}
+            />
+          </div>
 
           <p className="text-gray-500 text-sm mt-3 mb-2">or with email and password</p>
           <form onSubmit={handleSubmit} className="w-full space-y-3">
