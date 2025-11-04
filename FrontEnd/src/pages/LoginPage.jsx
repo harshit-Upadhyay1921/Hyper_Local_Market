@@ -183,7 +183,14 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
-import { FaShoppingCart, FaMapMarkerAlt, FaUsers, FaStore } from "react-icons/fa";
+import {
+  FaShoppingCart,
+  FaMapMarkerAlt,
+  FaUsers,
+  FaStore,
+  FaEye,
+  FaEyeSlash,
+} from "react-icons/fa";
 import loginImage from "../assets/LoginImage.jpeg";
 
 export default function LoginPage() {
@@ -198,6 +205,7 @@ export default function LoginPage() {
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   // Use a separate state to indicate if location was fetched successfully
   const [locationReady, setLocationReady] = useState(false);
 
@@ -333,21 +341,31 @@ export default function LoginPage() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full border text-black border-black px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full border border-green-500 text-black px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-600 transition"
             />
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-              className="w-full border text-black border-black px-3 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+                className="w-full border border-green-500 text-black px-3 py-2 pr-10 rounded-full focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-600 transition"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword((prev) => !prev)}
+                className="absolute inset-y-0 right-3 flex items-center text-green-600 hover:text-green-700 focus:outline-none"
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </button>
+            </div>
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition"
+              className="w-full bg-green-600 text-white py-2 rounded-full hover:bg-green-700 transition cursor-pointer"
             >
               {loading ? "Logging In..." : "Login"}
             </button>
