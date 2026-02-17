@@ -8,12 +8,12 @@ The platform enables shop owners to create and manage digital sales while allowi
 
 ## 🚀 Features
 
--  Shop Owner Registration & Management
--  JWT Authentication with Google OAuth Sign-In
--  Create, Update, Delete Digital Sales (CRUD Operations)
--  Location-Based Shop Discovery (10 km radius)
--  QR Code Generation for Sale Redemption
--  Platform-Based Customer Visit Tracking
+- 🏪 Shop Owner Registration & Management
+- 🔐 JWT Authentication with Google OAuth Sign-In
+- 📦 Create, Update, Delete Digital Sales (CRUD Operations)
+- 📍 Location-Based Shop Discovery (10 km radius)
+- 📱 QR Code Generation for Sale Redemption
+- 📊 Platform-Based Customer Visit Tracking
 
 ---
 
@@ -29,7 +29,7 @@ The platform enables shop owners to create and manage digital sales while allowi
 
 ---
 
-##  How It Works
+## 📌 How It Works
 
 1. A business owner registers and creates a shop.
 2. The owner adds digital promotional sales.
@@ -58,5 +58,3 @@ This repository is a forked version maintained for documentation and portfolio p
 To bridge the gap between offline businesses and digital customer discovery by enabling hyperlocal promotional visibility and measurable customer engagement.
 
 ---
-
-

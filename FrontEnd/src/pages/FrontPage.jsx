@@ -9,7 +9,7 @@
 //   FaChartLine,
 // } from "react-icons/fa";
 // import { Link } from "react-router-dom";
-
+//hi
 // export default function FrontPage() {
 //   return (
 //     <div className="bg-[#001e2b] text-white font-sans">
@@ -160,13 +160,15 @@ export default function FrontPage() {
       {/* Navbar */}
       <header className="flex flex-wrap justify-between items-center px-4 sm:px-6 md:px-8 lg:px-10 py-4 sm:py-5 md:py-6 shadow-md">
         <h1 className="text-2xl sm:text-3xl font-extrabold text-green-400">LocalLink</h1>
-        <nav className="flex gap-3 sm:gap-4 md:gap-6 mt-4 sm:mt-0 flex-wrap">
-          <button className="hover:text-green-400 text-base sm:text-lg">Product</button>
-          <button className="hover:text-green-400 text-base sm:text-lg">How it Works</button>
-          <button className="hover:text-green-400 text-base sm:text-lg">Benefits</button>
-          <button className="hover:text-green-400 text-base sm:text-lg">Login</button>
+        <nav className="flex gap-3 sm:gap-4 md:gap-6 mt-4 sm:mt-0 flex-wrap items-center">
+          <button className="hover:text-green-400 transition-colors text-base sm:text-lg">Product</button>
+          <button className="hover:text-green-400 transition-colors text-base sm:text-lg">How it Works</button>
+          <button className="hover:text-green-400 transition-colors text-base sm:text-lg">Benefits</button>
           <Link to="/login">
-            <button className="bg-green-500 hover:bg-green-600 px-4 sm:px-5 py-2 rounded font-semibold transition text-base sm:text-lg mt-2 sm:mt-0">
+            <button className="hover:text-green-400 transition-colors text-base sm:text-lg">Login</button>
+          </Link>
+          <Link to="/signup">
+            <button className="bg-green-500 hover:bg-green-600 px-4 sm:px-5 py-2 rounded font-semibold transition-all text-base sm:text-lg hover:shadow-lg">
               Get Started
             </button>
           </Link>
@@ -189,11 +191,11 @@ export default function FrontPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/signup">
-              <button className="bg-green-500 hover:bg-green-600 px-5 sm:px-6 py-3 rounded font-semibold">
+              <button className="bg-green-500 hover:bg-green-600 px-5 sm:px-6 py-3 rounded font-semibold transition-all hover:shadow-lg hover:scale-105">
                 Get Started
               </button>
             </Link>
-            <button className="border border-white px-5 sm:px-6 py-3 rounded hover:bg-white hover:text-black">
+            <button className="border border-white px-5 sm:px-6 py-3 rounded hover:bg-white hover:text-black transition-all">
               Learn More
             </button>
           </div>
@@ -213,8 +215,9 @@ export default function FrontPage() {
         </motion.div>
       </section>
 
-      {/* Feature Sections */}
+      {/* Features Section */}
       <section className="px-4 sm:px-8 md:px-12 py-12 md:py-20 bg-white text-black">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16 text-gray-800">Powerful Features</h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
           <div className="flex gap-4 sm:gap-6">
             <FaMapMarkerAlt size={36} className="sm:size-40 text-green-500" />
@@ -277,9 +280,11 @@ export default function FrontPage() {
             <p className="text-gray-300 text-base">Support your community, stay local, and shop with intent. We help you connect better.</p>
           </div>
         </div>
-        <button className="mt-8 sm:mt-10 bg-green-500 hover:bg-green-600 px-4 sm:px-6 py-3 rounded-lg font-semibold shadow-md text-base sm:text-lg">
-          Start Exploring Local Shops
-        </button>
+        <Link to="/signup">
+          <button className="mt-8 sm:mt-10 bg-green-500 hover:bg-green-600 px-4 sm:px-6 py-3 rounded-lg font-semibold shadow-md text-base sm:text-lg transition-all hover:shadow-xl hover:scale-105">
+            Start Exploring Local Shops
+          </button>
+        </Link>
       </section>
 
       {/* Footer */}

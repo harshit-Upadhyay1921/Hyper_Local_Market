@@ -2,7 +2,7 @@
 // import axios from "axios";
 // import { useParams, useNavigate } from "react-router-dom";
 // import QrScanner from "../Components/QrScanner.jsx"; // 👈 Scanner component
-
+//hi ih
 // export default function Dashboard() {
 //   const { id } = useParams();
 //   const [shop, setShop] = useState(null);

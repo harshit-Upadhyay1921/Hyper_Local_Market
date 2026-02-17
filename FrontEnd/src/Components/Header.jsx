@@ -7,7 +7,7 @@ const marginMap = {
   10: 'mb-10',
   20: 'mb-20',
 };
-
+//hi
 const textSizeMap = {
   sm: 'text-sm',
   xl: 'text-xl',

@@ -13,7 +13,7 @@
 //     longitude: "",
 //     latitude: ""
 //   });
-
+//hi bro
 //   const navigate = useNavigate();
 
 //   const [loading, setLoading] = useState(false);
@@ -302,15 +302,15 @@ export default function SignUpPage() {
 
   return (
     <GoogleOAuthProvider clientId={clientId}>
-      <div className="min-h-screen flex items-center justify-center bg-[#00382A] py-8 px-4">
-        <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#00382A] to-[#005a45] py-8 px-4">
+        <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md border border-green-100">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="text-green-700 text-2xl">🌴</span>
-            <h1 className="text-2xl font-bold text-green-800">LocalLink</h1>
+            <span className="text-green-600 text-2xl animate-pulse">🌴</span>
+            <h1 className="text-2xl font-bold text-green-700">LocalLink</h1>
           </div>
 
-          <h2 className="text-center text-xl font-semibold mb-4 text-blue-800">
-            -Sign up-
+          <h2 className="text-center text-xl font-semibold mb-4 bg-gradient-to-r from-green-700 to-blue-700 bg-clip-text text-transparent">
+            Sign Up
           </h2>
 
           {/* Google Login button centered */}
@@ -327,8 +327,8 @@ export default function SignUpPage() {
             />
           </div>
 
-          <div className="text-sm text-center mb-4 text-gray-500">
-            -or with email and password-
+          <div className="text-sm text-center mb-4 text-gray-600 font-medium">
+            or with email and password
           </div>
 
           <form onSubmit={handleSubmit}>
@@ -338,7 +338,7 @@ export default function SignUpPage() {
               placeholder="Full Name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full border border-black rounded-full text-black px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border border-gray-300 rounded-full text-black px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
               required
             />
 
@@ -348,7 +348,7 @@ export default function SignUpPage() {
               placeholder="Email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full border border-black text-black rounded-full px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border border-gray-300 text-black rounded-full px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
               required
             />
 
@@ -358,7 +358,7 @@ export default function SignUpPage() {
               placeholder="Password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full border border-black text-black rounded-full px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border border-gray-300 text-black rounded-full px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
               required
             />
 
@@ -366,7 +366,7 @@ export default function SignUpPage() {
               name="role"
               value={formData.role}
               onChange={handleChange}
-              className="w-full border-black border rounded-full text-black px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border-gray-300 border rounded-full text-black px-4 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
               required
             >
               <option value="">Select Role</option>
@@ -399,7 +399,7 @@ export default function SignUpPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition"
+              className="w-full bg-green-600 text-white py-2.5 rounded-lg hover:bg-green-700 transition-all shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
             >
               {loading ? "Signing Up..." : "Create your LocalLink account"}
             </button>
@@ -415,9 +415,9 @@ export default function SignUpPage() {
             </div>
           )}
 
-          <div className="mt-4 text-center text-sm text-gray-500">
+          <div className="mt-4 text-center text-sm text-gray-600">
             Already have an account?{" "}
-            <Link to="/login" className="text-green-600 underline">
+            <Link to="/login" className="text-green-700 hover:text-green-800 underline transition-colors font-medium">
               Click here to sign in →
             </Link>
           </div>
